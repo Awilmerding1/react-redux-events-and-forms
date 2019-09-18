@@ -1,7 +1,9 @@
 import React from 'react';
-import Animals from './Animals'
 import {connect} from 'react-redux'
 import fetchAnimals from './actions/fetchAnimals'
+
+import Animals from './Animals'
+import AnimalForm from './AnimalForm'
 
 class App extends React.Component {
 
@@ -12,6 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+          <AnimalForm/>
           <Animals animals={this.props.animals}/>
       </div>
     )
